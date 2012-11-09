@@ -14,8 +14,6 @@ abstract class vec2base extends vec {
     }
   }
 
-  // hashMap is defined only for the immutable class
-
   def isValid:Boolean = !x.isNaN && !y.isNaN
 
   @inline
@@ -82,8 +80,11 @@ abstract class vec2base extends vec {
 
   @deprecated
   def <(v:vec2) = x < v.x && y < v.y
+  @deprecated
   def <=(v:vec2) = x <= v.x && y <= v.y
+  @deprecated
   def >(v:vec2) = x > v.x && y > v.y
+  @deprecated
   def >=(v:vec2) = x >= v.x && y >= v.y
 
   override def toString = "vec2( %s, %s )".format(x,y)
